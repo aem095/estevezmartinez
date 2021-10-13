@@ -35,7 +35,8 @@ class Main(QtWidgets.QMainWindow):
         '''
         Eventos de comboBox
         '''
-        clients.Clientes.cargaProv_()
+        clients.Clientes.cargaProv_(self)
+        var.ui.cmbPro.activated[str].connect(clients.Clientes.serProv)
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])

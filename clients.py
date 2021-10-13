@@ -56,6 +56,13 @@ class Clientes():
         try:
             prov = ['', 'A Coruña', 'Lugo', 'Ourense', 'Pontevedra']
             for i in prov:
-                var.ui.cmbProv.addItem(i)
+                var.ui.cmbPro.addItem(i)
         except Exception as error:
             print('Error en módulo cargar provincias', error)
+
+    def serProv(prov):
+        try:
+            print("Has seleccionado la provincia de ", prov)
+            return prov
+        except Exception as error:
+            print('Error en módulo seleccionar provincias', error)

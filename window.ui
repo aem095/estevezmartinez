@@ -33,8 +33,8 @@
    <widget class="QPushButton" name="btnAceptar">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>340</y>
+      <x>400</x>
+      <y>370</y>
       <width>83</width>
       <height>23</height>
      </rect>
@@ -46,8 +46,8 @@
    <widget class="QPushButton" name="btnSalir">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>340</y>
+      <x>500</x>
+      <y>370</y>
       <width>82</width>
       <height>23</height>
      </rect>
@@ -61,16 +61,26 @@
      <string>Salir</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>260</y>
-      <width>132</width>
-      <height>22</height>
+      <y>270</y>
+      <width>185</width>
+      <height>25</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="lblSexo">
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Sexo:</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QRadioButton" name="rbtFem">
        <property name="styleSheet">
@@ -99,11 +109,11 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>300</y>
+      <y>330</y>
       <width>472</width>
       <height>25</height>
      </rect>
@@ -161,16 +171,22 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>220</y>
-      <width>225</width>
+      <y>240</y>
+      <width>391</width>
       <height>25</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
      <item>
       <widget class="QLabel" name="lblDir">
        <property name="styleSheet">
@@ -182,16 +198,20 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="txtDir"/>
+      <widget class="QLineEdit" name="txtDir">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>230</x>
       <y>180</y>
-      <width>440</width>
+      <width>461</width>
       <height>25</height>
      </rect>
     </property>
@@ -210,6 +230,19 @@
       <widget class="QLineEdit" name="txtApel"/>
      </item>
      <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
       <widget class="QLabel" name="lblNome">
        <property name="styleSheet">
         <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
@@ -224,7 +257,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -245,6 +278,19 @@
       </widget>
      </item>
      <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>75</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
       <widget class="QLineEdit" name="txtDNI"/>
      </item>
      <item>
@@ -262,12 +308,12 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>220</y>
-      <width>158</width>
+      <x>230</x>
+      <y>210</y>
+      <width>191</width>
       <height>25</height>
      </rect>
     </property>
@@ -284,6 +330,73 @@
      </item>
      <item>
       <widget class="QComboBox" name="cmbPro"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>210</y>
+      <width>191</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QLabel" name="lblMun">
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Municipio:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cmbMun"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>300</y>
+      <width>331</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <item>
+      <widget class="QLabel" name="lblAlta">
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Fecha de Alta:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateEdit" name="dateEdit">
+       <property name="dateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>2021</year>
+         <month>10</month>
+         <day>13</day>
+        </datetime>
+       </property>
+       <property name="currentSection">
+        <enum>QDateTimeEdit::DaySection</enum>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
