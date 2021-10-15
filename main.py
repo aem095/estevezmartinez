@@ -1,8 +1,26 @@
+from datetime import datetime
+
 import clients
 from window import *
 from windowaviso import *
 import sys, var, events
 
+from windowcal import Ui_windowcal
+
+
+class DialogCalendar(QtWidgets.QDialog):
+    def __init__(self):
+        '''
+        Clase ventana calendario
+        '''
+        super(DialogCalendar, self).__init__()
+        var.dlgcalendar = Ui_windowcal()
+        var.dlgcalendar.setupUi(self)
+        diaactual = datetime.now().day
+        mesactual = datetime.now().month
+        anoactual = datetime.now().year
+        var.dlgcalendar.Calendar.setSelectedDate((QtCore.QDate(anoactual,mesactual,diaactual)))
+        var.dlgcalendar.Calendar.clicked.connect(clients.Clientes.cargarFecha)
 
 class DialogAviso(QtWidgets.QDialog):
     def __init__(self):
@@ -13,6 +31,7 @@ class DialogAviso(QtWidgets.QDialog):
         var.dlgaviso = Ui_Aviso()
         var.dlgaviso.setupUi(self)
 
+
 class Main(QtWidgets.QMainWindow):
     def __init__(self):
         super(Main, self).__init__()
@@ -21,6 +40,7 @@ class Main(QtWidgets.QMainWindow):
         '''
         Eventos de botón
         '''
+        var.ui.btnCalendario.clicked.connect(events.Eventos.abrirCal)
         var.ui.btnSalir.clicked.connect(events.Eventos.Salir)
         var.ui.rbtGroupSex.buttonClicked.connect(clients.Clientes.SelSexo)
         var.ui.chkGroupPago.buttonClicked.connect(clients.Clientes.selPago)
@@ -42,5 +62,6 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication([])
     window = Main()
     var.dlgaviso = DialogAviso()
+    var.dlgcalendar = DialogCalendar()
     window.show()
     sys.exit(app.exec())

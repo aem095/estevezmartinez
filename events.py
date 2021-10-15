@@ -19,3 +19,9 @@ class Eventos():
                 var.dlgaviso.hide()
         except Exception() as error:
             print('Error en módulo salir', error)
+
+    def abrirCal(self):
+        try:
+            var.dlgcalendar.show()
+        except Exception as error:
+            print('Error en modulo abrir calendario', error)

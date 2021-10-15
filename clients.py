@@ -66,3 +66,11 @@ class Clientes():
             return prov
         except Exception as error:
             print('Error en módulo seleccionar provincias', error)
+
+    def cargarFecha(qDate):
+        try:
+            data = ('{0}/{1}/{2}'.format(qDate.day(), qDate.month(), qDate.year()))
+            var.ui.txtFechaAlta.setText(str(data))
+            var.dlgcalendar.hide()
+        except Exception as error:
+            print('Error cargar fecha en txtFecha', error)
